@@ -24,4 +24,16 @@ class DemoApplicationTests {
         assertEquals("10 is not perfect number", result);
     }
 
+    @Test
+    public void testPerfectNoBtwRange(){
+        String result = iPerfectNumberService.findPerfectNoBtwRange(1,100,1);
+        assertEquals("Perfect Numbers are [6, 28]", result);
+    }
+
+    @Test
+    public void testInvalidInputRange(){
+        String result = iPerfectNumberService.findPerfectNoBtwRange(100,2,1);
+        assertEquals("Invalid Range, Last number must be greater than first number", result);
+    }
+
 }
